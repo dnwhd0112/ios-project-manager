@@ -12,7 +12,7 @@ class Task: Object {
     @Persisted var title: String?
     @Persisted var date: Date
     @Persisted var body: String?
-    @Persisted var location: TaskLocation?
+    //@Persisted var location: TaskLocation?
 
     convenience init(title: String?, date: Date, body: String?, taskLocation: TaskLocation? = nil) {
         self.init()
@@ -20,6 +20,6 @@ class Task: Object {
         self.title = title
         self.date = date
         self.body = body
-        self.location = taskLocation
+        //self.location = taskLocation
     }
 }
