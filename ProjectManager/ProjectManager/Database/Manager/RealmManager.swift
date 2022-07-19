@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-protocol RealmManagerable {
+protocol DatabaseManagerable {
     func create<T: Object>(_ data: T) throws
     func read<T: Object>(_ nsPredicate: NSPredicate) -> T?
     func readAll<T: Object>() -> [T]
@@ -17,7 +17,7 @@ protocol RealmManagerable {
     func deleteAll() throws
 }
 
-final class RealmManager: RealmManagerable {
+final class RealmManager: DatabaseManagerable {
     private let realm: Realm
     
     init(realm: Realm) {

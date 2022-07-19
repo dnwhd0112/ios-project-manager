@@ -7,19 +7,17 @@
 
 import RealmSwift
 
-class Task: Object {
+class Task: Object, Codable {
     @Persisted(primaryKey: true) var id: String
     @Persisted var title: String?
     @Persisted var date: Date
     @Persisted var body: String?
-    @Persisted var location: TaskLocation?
 
-    convenience init(title: String?, date: Date, body: String?, taskLocation: TaskLocation? = nil) {
+    convenience init(title: String?, date: Date, body: String?) {
         self.init()
-        self.id = id
+        self.id = UUID().uuidString
         self.title = title
         self.date = date
         self.body = body
-        self.location = taskLocation
     }
 }

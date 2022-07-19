@@ -8,14 +8,14 @@
 import Foundation
 
 final class TaskManager {
-    private let realmManager: RealmManagerable
+    private let realmManager: DatabaseManagerable
     
     init(realmManager: RealmManager) {
         self.realmManager = realmManager
     }
     
     func create(task: Task) throws {
-        try realmManager.create(task)
+        try realmManager.create(task)        
     }
     
     func read(id: String) -> Task? {

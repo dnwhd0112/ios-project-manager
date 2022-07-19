@@ -15,6 +15,11 @@
 		672F3C872875644C00CA92D4 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672F3C862875644C00CA92D4 /* Date+Extension.swift */; };
 		67A743AD28746229004D1A5B /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A743AC28746229004D1A5B /* TaskManager.swift */; };
 		67A743AF28746C83004D1A5B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A743AE28746C83004D1A5B /* Task.swift */; };
+		67A767052886BA930023FB58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67A767042886BA930023FB58 /* GoogleService-Info.plist */; };
+		67A767072886BF4F0023FB58 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A767062886BF4F0023FB58 /* FirebaseManager.swift */; };
+		67A7670F2886C4270023FB58 /* FirebaseManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A7670E2886C4270023FB58 /* FirebaseManagerTests.swift */; };
+		67A767162886D3C90023FB58 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A767152886D3C90023FB58 /* String+Extension.swift */; };
+		67A767182886D7EF0023FB58 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A767172886D7EF0023FB58 /* Encodable+Extension.swift */; };
 		67FF0F0E287D4700001DD1F3 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF0F0D287D4700001DD1F3 /* PopoverViewController.swift */; };
 		67FF0F10287D472B001DD1F3 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF0F0F287D472B001DD1F3 /* PopoverView.swift */; };
 		67FF0F17287E9B89001DD1F3 /* ContextualActionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF0F16287E9B89001DD1F3 /* ContextualActionBuilder.swift */; };
@@ -28,13 +33,19 @@
 		E1C26DCB28746D1500A37983 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C26DCA28746D1500A37983 /* RealmManager.swift */; };
 		E1C26DD32874720200A37983 /* ProjectManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C26DD22874720200A37983 /* ProjectManagerTests.swift */; };
 		E1CCBDD1287EC10400348378 /* TaskInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CCBDD0287EC10400348378 /* TaskInfo.swift */; };
-		E1D0945E28756B380084308A /* TaskLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D0945D28756B380084308A /* TaskLocation.swift */; };
 		E1D0946028756D8A0084308A /* TaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D0945F28756D8A0084308A /* TaskType.swift */; };
 		E1D094632875716A0084308A /* DetailModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D094622875716A0084308A /* DetailModalView.swift */; };
 		E1D094652875A1C10084308A /* DetailModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D094642875A1C10084308A /* DetailModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		67A767102886C4270023FB58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7431EFA25F51E1D0094C4CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7431F0125F51E1D0094C4CF;
+			remoteInfo = ProjectManager;
+		};
 		E1C26DD42874720200A37983 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C7431EFA25F51E1D0094C4CF /* Project object */;
@@ -53,6 +64,12 @@
 		672F3C862875644C00CA92D4 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		67A743AC28746229004D1A5B /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		67A743AE28746C83004D1A5B /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		67A767042886BA930023FB58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		67A767062886BF4F0023FB58 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		67A7670C2886C4270023FB58 /* FirebaseManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67A7670E2886C4270023FB58 /* FirebaseManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManagerTests.swift; sourceTree = "<group>"; };
+		67A767152886D3C90023FB58 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		67A767172886D7EF0023FB58 /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
 		67FF0F0D287D4700001DD1F3 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		67FF0F0F287D472B001DD1F3 /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
 		67FF0F16287E9B89001DD1F3 /* ContextualActionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextualActionBuilder.swift; sourceTree = "<group>"; };
@@ -73,7 +90,6 @@
 		E1C26DDD2874769600A37983 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1C26DE0287476F700A37983 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CCBDD0287EC10400348378 /* TaskInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskInfo.swift; sourceTree = "<group>"; };
-		E1D0945D28756B380084308A /* TaskLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskLocation.swift; sourceTree = "<group>"; };
 		E1D0945F28756D8A0084308A /* TaskType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskType.swift; sourceTree = "<group>"; };
 		E1D094622875716A0084308A /* DetailModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModalView.swift; sourceTree = "<group>"; };
 		E1D094642875A1C10084308A /* DetailModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModalViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +97,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		67A767092886C4270023FB58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7431EFF25F51E1D0094C4CF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -136,6 +159,8 @@
 				672F3C862875644C00CA92D4 /* Date+Extension.swift */,
 				671B23892877C29D00D0EAB2 /* UIView+Extension.swift */,
 				E1BBADAF287DC2D000FCFE76 /* UITableView+Extension.swift */,
+				67A767152886D3C90023FB58 /* String+Extension.swift */,
+				67A767172886D7EF0023FB58 /* Encodable+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -154,8 +179,17 @@
 			children = (
 				67A743AC28746229004D1A5B /* TaskManager.swift */,
 				E1C26DCA28746D1500A37983 /* RealmManager.swift */,
+				67A767062886BF4F0023FB58 /* FirebaseManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		67A7670D2886C4270023FB58 /* FirebaseManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				67A7670E2886C4270023FB58 /* FirebaseManagerTests.swift */,
+			);
+			path = FirebaseManagerTests;
 			sourceTree = "<group>";
 		};
 		67FF0F0C287D4314001DD1F3 /* Popover */ = {
@@ -191,6 +225,7 @@
 			children = (
 				C7431F0425F51E1D0094C4CF /* ProjectManager */,
 				E1C26DD12874720200A37983 /* ProjectManagerTests */,
+				67A7670D2886C4270023FB58 /* FirebaseManagerTests */,
 				C7431F0325F51E1D0094C4CF /* Products */,
 				552AF73B47F5D3A8D03264B7 /* Pods */,
 				15E5A62F20B2EA7CEA1614AD /* Frameworks */,
@@ -202,6 +237,7 @@
 			children = (
 				C7431F0225F51E1D0094C4CF /* ProjectManager.app */,
 				E1C26DD02874720200A37983 /* ProjectManagerTests.xctest */,
+				67A7670C2886C4270023FB58 /* FirebaseManagerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -218,6 +254,7 @@
 				C7431F0E25F51E1E0094C4CF /* Assets.xcassets */,
 				C7431F1025F51E1E0094C4CF /* LaunchScreen.storyboard */,
 				C7431F1325F51E1E0094C4CF /* Info.plist */,
+				67A767042886BA930023FB58 /* GoogleService-Info.plist */,
 			);
 			path = ProjectManager;
 			sourceTree = "<group>";
@@ -226,7 +263,6 @@
 			isa = PBXGroup;
 			children = (
 				67A743AE28746C83004D1A5B /* Task.swift */,
-				E1D0945D28756B380084308A /* TaskLocation.swift */,
 				E1D0945F28756D8A0084308A /* TaskType.swift */,
 				E1CCBDD0287EC10400348378 /* TaskInfo.swift */,
 			);
@@ -253,6 +289,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		67A7670B2886C4270023FB58 /* FirebaseManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67A767122886C4270023FB58 /* Build configuration list for PBXNativeTarget "FirebaseManagerTests" */;
+			buildPhases = (
+				67A767082886C4270023FB58 /* Sources */,
+				67A767092886C4270023FB58 /* Frameworks */,
+				67A7670A2886C4270023FB58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67A767112886C4270023FB58 /* PBXTargetDependency */,
+			);
+			name = FirebaseManagerTests;
+			productName = FirebaseManagerTests;
+			productReference = 67A7670C2886C4270023FB58 /* FirebaseManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C7431F0125F51E1D0094C4CF /* ProjectManager */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7431F1625F51E1E0094C4CF /* Build configuration list for PBXNativeTarget "ProjectManager" */;
@@ -297,9 +351,13 @@
 		C7431EFA25F51E1D0094C4CF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					67A7670B2886C4270023FB58 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = C7431F0125F51E1D0094C4CF;
+					};
 					C7431F0125F51E1D0094C4CF = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -324,17 +382,26 @@
 			targets = (
 				C7431F0125F51E1D0094C4CF /* ProjectManager */,
 				E1C26DCF2874720200A37983 /* ProjectManagerTests */,
+				67A7670B2886C4270023FB58 /* FirebaseManagerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		67A7670A2886C4270023FB58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7431F0025F51E1D0094C4CF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C7431F1225F51E1E0094C4CF /* LaunchScreen.storyboard in Resources */,
 				C7431F0F25F51E1E0094C4CF /* Assets.xcassets in Resources */,
+				67A767052886BA930023FB58 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,22 +474,32 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		67A767082886C4270023FB58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67A7670F2886C4270023FB58 /* FirebaseManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7431EFE25F51E1D0094C4CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C7431F0A25F51E1D0094C4CF /* MainViewController.swift in Sources */,
+				67A767182886D7EF0023FB58 /* Encodable+Extension.swift in Sources */,
 				E1D094652875A1C10084308A /* DetailModalViewController.swift in Sources */,
 				E1BBADB0287DC2D100FCFE76 /* UITableView+Extension.swift in Sources */,
 				671B238A2877C29D00D0EAB2 /* UIView+Extension.swift in Sources */,
+				67A767072886BF4F0023FB58 /* FirebaseManager.swift in Sources */,
 				672F3C7F2875592E00CA92D4 /* MainView.swift in Sources */,
-				E1D0945E28756B380084308A /* TaskLocation.swift in Sources */,
 				C7431F0625F51E1D0094C4CF /* AppDelegate.swift in Sources */,
 				67FF0F10287D472B001DD1F3 /* PopoverView.swift in Sources */,
 				67A743AD28746229004D1A5B /* TaskManager.swift in Sources */,
 				67A743AF28746C83004D1A5B /* Task.swift in Sources */,
 				672F3C872875644C00CA92D4 /* Date+Extension.swift in Sources */,
 				67FF0F0E287D4700001DD1F3 /* PopoverViewController.swift in Sources */,
+				67A767162886D3C90023FB58 /* String+Extension.swift in Sources */,
 				672F3C8328755CA900CA92D4 /* UIStackView+Extension.swift in Sources */,
 				E1D0946028756D8A0084308A /* TaskType.swift in Sources */,
 				E1D094632875716A0084308A /* DetailModalView.swift in Sources */,
@@ -446,6 +523,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		67A767112886C4270023FB58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7431F0125F51E1D0094C4CF /* ProjectManager */;
+			targetProxy = 67A767102886C4270023FB58 /* PBXContainerItemProxy */;
+		};
 		E1C26DD52874720200A37983 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C7431F0125F51E1D0094C4CF /* ProjectManager */;
@@ -465,6 +547,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		67A767132886C4270023FB58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P76BNHYK6G;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yoonyoungHuh.FirebaseManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectManager.app/ProjectManager";
+			};
+			name = Debug;
+		};
+		67A767142886C4270023FB58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P76BNHYK6G;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yoonyoungHuh.FirebaseManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectManager.app/ProjectManager";
+			};
+			name = Release;
+		};
 		C7431F1425F51E1E0094C4CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -666,6 +788,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		67A767122886C4270023FB58 /* Build configuration list for PBXNativeTarget "FirebaseManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67A767132886C4270023FB58 /* Debug */,
+				67A767142886C4270023FB58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C7431EFD25F51E1D0094C4CF /* Build configuration list for PBXProject "ProjectManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
