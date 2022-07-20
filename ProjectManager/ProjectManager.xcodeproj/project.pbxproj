@@ -17,7 +17,6 @@
 		67A743AF28746C83004D1A5B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A743AE28746C83004D1A5B /* Task.swift */; };
 		67A767052886BA930023FB58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67A767042886BA930023FB58 /* GoogleService-Info.plist */; };
 		67A767072886BF4F0023FB58 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A767062886BF4F0023FB58 /* FirebaseManager.swift */; };
-		67A7670F2886C4270023FB58 /* FirebaseManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A7670E2886C4270023FB58 /* FirebaseManagerTests.swift */; };
 		67A767162886D3C90023FB58 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A767152886D3C90023FB58 /* String+Extension.swift */; };
 		67A767182886D7EF0023FB58 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A767172886D7EF0023FB58 /* Encodable+Extension.swift */; };
 		67FF0F0E287D4700001DD1F3 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF0F0D287D4700001DD1F3 /* PopoverViewController.swift */; };
@@ -67,7 +66,6 @@
 		67A767042886BA930023FB58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		67A767062886BF4F0023FB58 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		67A7670C2886C4270023FB58 /* FirebaseManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		67A7670E2886C4270023FB58 /* FirebaseManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManagerTests.swift; sourceTree = "<group>"; };
 		67A767152886D3C90023FB58 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		67A767172886D7EF0023FB58 /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
 		67FF0F0D287D4700001DD1F3 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
@@ -184,14 +182,6 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		67A7670D2886C4270023FB58 /* FirebaseManagerTests */ = {
-			isa = PBXGroup;
-			children = (
-				67A7670E2886C4270023FB58 /* FirebaseManagerTests.swift */,
-			);
-			path = FirebaseManagerTests;
-			sourceTree = "<group>";
-		};
 		67FF0F0C287D4314001DD1F3 /* Popover */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,7 +215,6 @@
 			children = (
 				C7431F0425F51E1D0094C4CF /* ProjectManager */,
 				E1C26DD12874720200A37983 /* ProjectManagerTests */,
-				67A7670D2886C4270023FB58 /* FirebaseManagerTests */,
 				C7431F0325F51E1D0094C4CF /* Products */,
 				552AF73B47F5D3A8D03264B7 /* Pods */,
 				15E5A62F20B2EA7CEA1614AD /* Frameworks */,
@@ -478,7 +467,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67A7670F2886C4270023FB58 /* FirebaseManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
