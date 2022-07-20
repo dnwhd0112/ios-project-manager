@@ -192,6 +192,6 @@ extension DetailModalView {
     func setLabel(task: Task) {
         titleTextField.text = task.title
         bodyTextView.text = task.body
-        datePicker.date = task.date
+        datePicker.date = task.date.date ?? Date.today
     }
 }

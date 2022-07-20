@@ -19,6 +19,10 @@ PODS:
   - FirebaseDatabase (9.3.0):
     - FirebaseCore (~> 9.0)
     - leveldb-library (~> 1.22)
+  - FirebaseDatabaseSwift (9.3.0):
+    - FirebaseDatabase (~> 9.0)
+    - FirebaseSharedSwift (~> 9.0)
+  - FirebaseSharedSwift (9.3.0)
   - GoogleDataTransport (9.1.4):
     - GoogleUtilities/Environment (~> 7.7)
     - nanopb (< 2.30910.0, >= 2.30908.0)
@@ -56,6 +60,7 @@ PODS:
 DEPENDENCIES:
   - FirebaseAuth
   - FirebaseDatabase
+  - FirebaseDatabaseSwift
   - RealmSwift
   - SwiftLint
 
@@ -66,6 +71,8 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseCoreInternal
     - FirebaseDatabase
+    - FirebaseDatabaseSwift
+    - FirebaseSharedSwift
     - GoogleDataTransport
     - GoogleUtilities
     - GTMSessionFetcher
@@ -82,6 +89,8 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: 060eb57cc56dfaf40b1b1b5874a5c17c41ce79f8
   FirebaseCoreInternal: 635d1c9a612a6502b6377a0c92af83758076ffff
   FirebaseDatabase: 92350185966ddd283842aa9ca07e188691f3b8ad
+  FirebaseDatabaseSwift: 9d7cc1a8c2c6c9c5676cd4351071b7f0e2b4fa9f
+  FirebaseSharedSwift: 8becafc1096ca5703ac03065ed80496023880ac0
   GoogleDataTransport: 5fffe35792f8b96ec8d6775f5eccd83c998d5a3b
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   GTMSessionFetcher: 681175626052e03fdde7952f7e9c7a9785719506
@@ -92,6 +101,6 @@ SPEC CHECKSUMS:
   RealmSwift: 8a516a8759d80d52ebcec1ff1076f5f5159f98b2
   SwiftLint: d41cc46a2ae58ac6d9f26954bc89f1d72e71fdef
 
-PODFILE CHECKSUM: af77186720fcc07b5378875e48bbc710a28ded7e
+PODFILE CHECKSUM: bfc5003b2650ad10217f86999a0fd039b30ed888
 
 COCOAPODS: 1.11.3

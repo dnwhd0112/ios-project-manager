@@ -11,7 +11,7 @@ import RealmSwift
 protocol DatabaseManagerable {
     func create<T: Object>(_ data: T) throws
     func read<T: Object>(_ nsPredicate: NSPredicate) -> T?
-    func readAll<T: Object>() -> [T]
+    func readAll<T: Object>() -> [T]?
     func update<T: Object>(data: T, updateHandler: ((T) -> Void)) throws
     func delete<T: Object>(_ data: T) throws
     func deleteAll() throws
@@ -36,7 +36,7 @@ final class RealmManager: DatabaseManagerable {
                     .first
     }
     
-    func readAll<T: Object>() -> [T] {
+    func readAll<T: Object>() -> [T]? {
         let data = realm.objects(T.self)
         return Array(data)
     }

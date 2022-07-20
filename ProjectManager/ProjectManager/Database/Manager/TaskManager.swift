@@ -23,7 +23,7 @@ final class TaskManager {
         return realmManager.read(predicate)
     }
     
-    func readAll() -> [Task] {
+    func readAll() -> [Task]? {
         return realmManager.readAll()
     }
     

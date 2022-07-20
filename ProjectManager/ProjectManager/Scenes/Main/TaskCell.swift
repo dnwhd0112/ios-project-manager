@@ -78,8 +78,8 @@ final class TaskCell: UITableViewCell {
     func setUpLabel(task: Task) {
         self.titleLabel.text = task.title
         self.bodyLabel.text = task.body
-        self.dateLabel.text = task.date.formattedString
-        setDateLabelColor(date: task.date)
+        self.dateLabel.text = task.date.date?.formattedString ?? ""
+        setDateLabelColor(date: task.date.date ?? Date.today)
     }
     
     private func setDateLabelColor(date: Date) {
