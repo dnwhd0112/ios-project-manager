@@ -7,7 +7,7 @@
 import Foundation
 
 struct TaskInfo {
-    let task: Task
+    let task: TaskItem
     let type: TaskType
     let indexPath: IndexPath
 }

@@ -7,8 +7,8 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    private typealias DataSource = UITableViewDiffableDataSource<Int, Task>
-    private typealias Snapshot = NSDiffableDataSourceSnapshot<Int, Task>
+    private typealias DataSource = UITableViewDiffableDataSource<Int, TaskItem>
+    private typealias Snapshot = NSDiffableDataSourceSnapshot<Int, TaskItem>
     
     private let mainView = MainView()
     private var dataSources: [TaskType: DataSource] = [:]
@@ -68,7 +68,7 @@ extension MainViewController: UITableViewDelegate {
 // MARK: DetailViewControllerDelegate
 
 extension MainViewController: DetailViewControllerDelegate {
-    func addTask(_ task: Task) {
+    func addTask(_ task: TaskItem) {
         addCell(task: task, type: .todo)
         try? taskManager?.create(task: task)
         mainView.refreshCount()
@@ -97,7 +97,7 @@ extension MainViewController: PopoverViewControllerDelegate {
         mainView.refreshCount()
         
         let task = taskInfo.task
-        let updatedTask = Task(id: task.id, title: task.title, date: task.date, body: task.body, type: type)
+        let updatedTask = TaskItem(id: task.id, title: task.title, date: task.date, body: task.body, type: type)
         try? taskManager?.update(task: updatedTask)
     }
 }
@@ -175,7 +175,7 @@ extension MainViewController {
         }
     }
     
-    private func addCell(task: Task, type: TaskType) {
+    private func addCell(task: TaskItem, type: TaskType) {
         let dataSource = dataSources[type]
         guard let snapshot = dataSource?.snapshot(), snapshot.numberOfSections > 0 else { return }
         var copySnapshot = snapshot
@@ -217,7 +217,9 @@ extension MainViewController {
     
     private func setUpDataSource() {
         TaskType.allCases.forEach { taskType in
-            dataSources[taskType] = makeDataSource(type: taskType)
+            Task {
+                await makeDataSource(type: taskType)
+            }
         }
     }
     
@@ -231,8 +233,23 @@ extension MainViewController {
         tableView?.reloadData()
     }
     
-    private func makeDataSource(type: TaskType) -> DataSource? {
-        guard let tableView = mainView.retrieveTableView(taskType: type) else { return nil }
+//    private func makeDataSource(type: TaskType) async -> DataSource? {
+//        guard let tableView = mainView.retrieveTableView(taskType: type) else { return nil }
+//
+//        let dataSource = DataSource(tableView: tableView, cellProvider: { tableView, indexPath, item in
+//            let cell = tableView.dequeueReusableCell(withIdentifier: TaskCell.identifier,
+//                                                     for: indexPath) as? TaskCell
+//            cell?.setUpLabel(task: item)
+//            return cell
+//        })
+//        guard let snapshot = await makeSnapshot(type: type) else { return nil }
+//
+//        await dataSource.apply(snapshot)
+//        return dataSource
+//    }
+    
+    private func makeDataSource(type: TaskType) async {
+        guard let tableView = mainView.retrieveTableView(taskType: type) else { return }
     
         let dataSource = DataSource(tableView: tableView, cellProvider: { tableView, indexPath, item in
             let cell = tableView.dequeueReusableCell(withIdentifier: TaskCell.identifier,
@@ -240,15 +257,16 @@ extension MainViewController {
             cell?.setUpLabel(task: item)
             return cell
         })
-        guard let snapshot = makeSnapshot(type: type) else { return nil }
+        guard let snapshot = await makeSnapshot(type: type) else { return }
         
-        dataSource.apply(snapshot)
-        return dataSource
+        await dataSource.apply(snapshot)
+        dataSources[type] = dataSource
     }
     
-    private func makeSnapshot(type: TaskType) -> Snapshot? {
+    private func makeSnapshot(type: TaskType) async -> Snapshot? {
         var snapshot = Snapshot()
-        guard let tasks = taskManager?.read(type: type) else { return nil }
+        
+        guard let tasks = try? await taskManager?.read(type: type) else { return nil }
         
         snapshot.appendSections([0])
         snapshot.appendItems(tasks)

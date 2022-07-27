@@ -22,12 +22,12 @@ final class DetailModalView: UIView {
     
     private lazy var bottomConstraint = stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20)
     weak var buttonDelegate: ButtonActionDelegate?
-    var task: Task {
+    var task: TaskItem {
         let title = titleTextField.text
         let body = bodyTextView.text
         let date = datePicker.date
         
-        return Task(title: title, date: date, body: body)
+        return TaskItem(title: title, date: date, body: body)
     }
     
     // MARK: UIComponents - UIButton
@@ -78,6 +78,7 @@ final class DetailModalView: UIView {
         textField.layer.shadowOffset = CGSize(width: 0, height: 4)
         textField.layer.shadowRadius = 5
         textField.layer.shadowOpacity = 0.3
+        textField.layer.shadowPath = nil
         textField.leftView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: 10, height: 0)))
         textField.leftViewMode = .always
         
@@ -156,12 +157,12 @@ extension DetailModalView {
         bottomConstraint = stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20)
     }
     
-    func makeTask(id: String) -> Task {
+    func makeTask(id: String) -> TaskItem {
         let title = titleTextField.text
         let body = bodyTextView.text
         let date = datePicker.date
         
-        return Task(id: id, title: title, date: date, body: body)
+        return TaskItem(id: id, title: title, date: date, body: body)
     }
 }
 
@@ -197,7 +198,7 @@ extension DetailModalView {
         bodyTextView.delegate = delegate
     }
     
-    func setLabel(task: Task) {
+    func setLabel(task: TaskItem) {
         titleTextField.text = task.title
         bodyTextView.text = task.body
         datePicker.date = task.date

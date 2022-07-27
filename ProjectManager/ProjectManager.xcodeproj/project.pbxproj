@@ -14,7 +14,7 @@
 		672F3C852875610900CA92D4 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672F3C842875610900CA92D4 /* TaskCell.swift */; };
 		672F3C872875644C00CA92D4 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672F3C862875644C00CA92D4 /* Date+Extension.swift */; };
 		67A743AD28746229004D1A5B /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A743AC28746229004D1A5B /* TaskManager.swift */; };
-		67A743AF28746C83004D1A5B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A743AE28746C83004D1A5B /* Task.swift */; };
+		67A743AF28746C83004D1A5B /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A743AE28746C83004D1A5B /* TaskItem.swift */; };
 		67FF0F0E287D4700001DD1F3 /* MovingPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF0F0D287D4700001DD1F3 /* MovingPopOverViewController.swift */; };
 		67FF0F10287D472B001DD1F3 /* MovingPopOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF0F0F287D472B001DD1F3 /* MovingPopOverView.swift */; };
 		67FF0F17287E9B89001DD1F3 /* ContextualActionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF0F16287E9B89001DD1F3 /* ContextualActionBuilder.swift */; };
@@ -68,7 +68,7 @@
 		672F3C842875610900CA92D4 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		672F3C862875644C00CA92D4 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		67A743AC28746229004D1A5B /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
-		67A743AE28746C83004D1A5B /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		67A743AE28746C83004D1A5B /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
 		67FF0F0D287D4700001DD1F3 /* MovingPopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingPopOverViewController.swift; sourceTree = "<group>"; };
 		67FF0F0F287D472B001DD1F3 /* MovingPopOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingPopOverView.swift; sourceTree = "<group>"; };
 		67FF0F16287E9B89001DD1F3 /* ContextualActionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextualActionBuilder.swift; sourceTree = "<group>"; };
@@ -273,7 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				E1C3F80C288EBD9C00111F8A /* History.swift */,
-				67A743AE28746C83004D1A5B /* Task.swift */,
+				67A743AE28746C83004D1A5B /* TaskItem.swift */,
 				E1D0945F28756D8A0084308A /* TaskType.swift */,
 				E1CCBDD0287EC10400348378 /* TaskInfo.swift */,
 				E1C3F80E288EBF7C00111F8A /* WorkType.swift */,
@@ -522,7 +522,7 @@
 				C7431F0625F51E1D0094C4CF /* AppDelegate.swift in Sources */,
 				67FF0F10287D472B001DD1F3 /* MovingPopOverView.swift in Sources */,
 				67A743AD28746229004D1A5B /* TaskManager.swift in Sources */,
-				67A743AF28746C83004D1A5B /* Task.swift in Sources */,
+				67A743AF28746C83004D1A5B /* TaskItem.swift in Sources */,
 				672F3C872875644C00CA92D4 /* Date+Extension.swift in Sources */,
 				E1C3F807288EAD7600111F8A /* HistoryPopOverViewController.swift in Sources */,
 				67FF0F0E287D4700001DD1F3 /* MovingPopOverViewController.swift in Sources */,

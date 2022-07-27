@@ -76,6 +76,29 @@ final class FirebaseManager: FirebaseManagerAble {
         }
     }
     
+    func readAll<T: FirebaseDatable>() async -> [T] {
+        
+        let taskItemRef = T.path.reduce(database) { database, path in
+            database.child(path)
+        }
+        
+        let dataSnapshot = try? await taskItemRef.getData()
+        guard let dataSnapshot = dataSnapshot
+        else {
+            return []
+        }
+        
+        guard let childArray = dataSnapshot.children.allObjects as? [DataSnapshot] else {
+            return []
+        }
+        
+        let array = childArray.compactMap { child in
+            try? child.data(as: T.self)
+        }
+        
+        return array
+    }
+    
     func update<T: FirebaseDatable>(updatedData: T) throws {
         guard let encodedValues = updatedData.toDictionary else {
             return
@@ -96,4 +119,27 @@ final class FirebaseManager: FirebaseManagerAble {
         
         taskItemRef.removeValue()
     }
+    
+    func read<T: FirebaseDatable>(key: String) async -> [T] {
+        
+        let taskItemRef = T.path.reduce(database) { database, path in
+            database.child(path)
+        }.child(key)
+        
+        
+        let dataSnapshot = try? await taskItemRef.getData()
+        guard let dataSnapshot = dataSnapshot else {
+            return []
+        }
+        
+        guard let childArray = dataSnapshot.children.allObjects as? [DataSnapshot] else {
+            return []
+        }
+        
+        let array = childArray.compactMap { child in
+            try? child.data(as: T.self)
+        }
+        
+        return array
+    }    
 }

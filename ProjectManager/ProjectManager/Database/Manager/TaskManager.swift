@@ -14,58 +14,64 @@ enum RealmError: Error {
 // 호출 순서 주의: realm에서 먼저 생성 시 오류 발생
 final class TaskManager {
     private let firebaseManager: FirebaseManager
-    private let realmManager: RealmManagerable
+    //private let realmManager: RealmManagerable
     
     init(realmManager: RealmManagerable? = RealmManager.shared,
          firebaseManager: FirebaseManager = FirebaseManager()) throws {
         guard let realmManager = realmManager else { throw RealmError.initializationError }
         self.firebaseManager = firebaseManager
-        self.realmManager = realmManager
+       // self.realmManager = realmManager
     }
     
-    func create(task: Task) throws {
+    func create(task: TaskItem) throws {
         try firebaseManager.create(task)
-        try realmManager.create(task)
+        //try realmManager.create(task)
     }
     
-    func read(id: String) -> Task? {
-        let predicate = NSPredicate(format: "id = %@", id)
-        return realmManager.read(predicate).first
+    func read(id: String) async -> TaskItem? {
+        return await firebaseManager.read(key: id).first
+        //return realmManager.read(predicate).first
     }
     
-    func read(type: TaskType) -> [Task] {
-        let predicate = NSPredicate(format: "type = %@", type.rawValue)
-        return realmManager.read(predicate)
+    func read(type: TaskType) async -> [TaskItem] {
+        //let predicate = NSPredicate(format: "type = %@", type.rawValue)
+        //return realmManager.read(predicate)
+        await readAll().filter {
+            $0.type == type.rawValue
+        }
     }
+     
     
-    func readAll() -> [Task] {
-        return realmManager.readAll()
+    func readAll() async -> [TaskItem] {
+        return await firebaseManager.readAll()
+//        return realmManager.readAll()
     }
+     
     
-    func update(task: Task) throws {
+    func update(task: TaskItem) throws {
         try firebaseManager.update(updatedData: task)
-        try realmManager.update(updatedData: task)
+        //try realmManager.update(updatedData: task)
     }
     
-    func delete(task: Task) throws {
+    func delete(task: TaskItem) throws {
         try firebaseManager.delete(task)
-        try realmManager.delete(task)
+        //try realmManager.delete(task)
     }
     
     func deleteAll() throws {
-        try realmManager.deleteAll()
+        //try realmManager.deleteAll()
     }
     
     func sync(complete: @escaping () -> Void) throws {
-        let firebaseDataCompletion: ([Task]) -> Void = { tasks in
-            try? self.realmManager.deleteAll()
-            tasks.forEach { task in
-                try? self.realmManager.update(updatedData: task)
-            }
-            complete()
-        }
-        
-        firebaseManager.readAll(completion: firebaseDataCompletion)
+//        let firebaseDataCompletion: ([Task]) -> Void = { tasks in
+//            try? self.realmManager.deleteAll()
+//            tasks.forEach { task in
+//                try? self.realmManager.update(updatedData: task)
+//            }
+//            complete()
+//        }
+//
+//        firebaseManager.readAll(completion: firebaseDataCompletion)
     }
     
     func setNetworkConnectionDelegate(delegate: NetworkConnectionDelegate) {

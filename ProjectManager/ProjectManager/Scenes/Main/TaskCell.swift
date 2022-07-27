@@ -75,7 +75,7 @@ final class TaskCell: UITableViewCell {
         ])
     }
     
-    func setUpLabel(task: Task) {
+    func setUpLabel(task: TaskItem) {
         self.titleLabel.text = task.title
         self.bodyLabel.text = task.body
         self.dateLabel.text = task.date.formattedString

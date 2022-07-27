@@ -8,7 +8,7 @@
 import UIKit
 
 protocol DetailViewControllerDelegate: AnyObject {
-    func addTask(_ task: Task)
+    func addTask(_ task: TaskItem)
     func updateTask(by taskInfo: TaskInfo)
 }
 

@@ -12,11 +12,11 @@ protocol FirebaseDatable: Codable {
     static var path: [String] { get }
 }
 
-class Task: Object, FirebaseDatable {
+class TaskItem: Object, FirebaseDatable {
     static var path: [String] = ["task"]
     
     var detailPath: [String] {
-        var newPath = Task.path
+        var newPath = TaskItem.path
         newPath.append(id)
         return newPath
     }
