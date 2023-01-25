@@ -26,7 +26,7 @@ pod install 해주세요!
 
 |UI구현|local db|remote db|
 |------|---|---|
-|UIKit|Realm|MongoDB Atlas|
+|UIKit|Realm|Firebase realtime Database|
 
 
 ## 타임라인
@@ -106,7 +106,7 @@ realm은 `@ThreadSafe Wrapper`, `writeAsync` 등 여러 방법으로 thread safe
 
 #### MongoDB Atlas
 
-파이어 베이스와 비슷한 기능을 제공하는것으로 알고있지만 관련 문서가 너무 적고 사용사례도 적다. Realm과 높은 연동성을 바라보고 사용할 예정이다. -> 못써먹겠다 요구하는게 너무 많다.
+파이어 베이스와 비슷한 기능을 제공하는것으로 알고있지만 관련 문서가 너무 적고 사용사례도 적다. Realm과 높은 연동성을 바라보고 사용할 예정이엇지만 난이도가 높아 Firebase를 사용하는 방향으로 전환하였다.
 [공식 튜토리얼](https://www.mongodb.com/docs/realm/tutorial/ios-swift/)
 
 #### 5. 어떤 의존성 관리도구를 사용하여 관리할 수 있는가?
